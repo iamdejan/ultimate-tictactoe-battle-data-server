@@ -7,6 +7,10 @@ export function registerRoute(app: Express) {
     });
 
     app.post("/login", (request, response) => {
+        //TODO: login
+    });
+
+    app.post("/authenticate", (request, response) => {
         //TODO: authenticate
     });
 }
