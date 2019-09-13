@@ -11,6 +11,6 @@ export function registerRoute(app: Express) {
     });
 
     app.post("/authenticate", (request, response) => {
-        //TODO: authenticate
+        func.authenticateJWT(request, response);
     });
 }
