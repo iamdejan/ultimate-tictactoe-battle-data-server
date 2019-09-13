@@ -7,7 +7,7 @@ export function registerRoute(app: Express) {
     });
 
     app.post("/login", (request, response) => {
-        //TODO: login
+        func.login(request, response);
     });
 
     app.post("/authenticate", (request, response) => {

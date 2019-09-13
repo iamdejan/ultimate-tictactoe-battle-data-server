@@ -13,11 +13,11 @@ export class User {
     @Column()
     password: string;
 
-    public hashPassword() {
+    public hashPassword(): void {
         this.password = bcrypt.hashSync(this.password, 8);
     }
 
-    public checkIfUnencryptedPasswordIsValid(unencryptedPassword: string) {
+    public checkIfUnencryptedPasswordIsValid(unencryptedPassword: string): boolean {
         return bcrypt.compareSync(unencryptedPassword, this.password);
     }
 
