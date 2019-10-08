@@ -6,7 +6,7 @@ import cors from "cors";
 import {createConnection} from "typeorm";
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 createConnection().then(async connection => {
     app.use(cors());
@@ -23,6 +23,6 @@ createConnection().then(async connection => {
             return console.error(error);
         }
 
-        return console.log("Server is listening at port", 3000);
+        return console.log("Server is listening at port", port);
     });
 }).catch(error => console.error(error));
